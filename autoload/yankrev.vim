@@ -8,6 +8,7 @@
 "
 " Dependencies:
 "  - Requires Vim 8.0 or higher.
+"  - Requires git.
 "
 " Version:     0.1.0
 " Changes:
