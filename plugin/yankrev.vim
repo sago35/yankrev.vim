@@ -15,12 +15,12 @@
 "       Initial release
 
 " Avoid installing twice or when in unsupported Vim version.
-"if exists('g:loaded_yankrev') || (v:version < 800)
-"	finish
-"endif
-"let g:loaded_yankrev = 1
-"let s:save_cpo = &cpo
-"set cpo&vim
+if exists('g:loaded_yankrev') || (v:version < 800)
+    finish
+endif
+let g:loaded_yankrev = 1
+let s:save_cpo = &cpo
+set cpo&vim
 
 function! s:Yankrev()
     let l:filename = substitute(expand("%"), "\\", "/", "g")
@@ -44,6 +44,6 @@ endfunction
 
 command! -nargs=0 Yankrev call s:Yankrev()
 
-"let &cpo = s:save_cpo
-"unlet s:save_cpo
-" vim: ts=4 sts=0 sw=4 noet
+let &cpo = s:save_cpo
+unlet s:save_cpo
+" vim: ts=4 sts=0 sw=4
