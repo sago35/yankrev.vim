@@ -12,7 +12,7 @@
 " Version:     0.1.0
 " Changes:
 "   0.1.0
-"       Initial Release
+"       Initial release
 
 " Avoid installing twice or when in unsupported Vim version.
 "if exists('g:loaded_yankrev') || (v:version < 800)
