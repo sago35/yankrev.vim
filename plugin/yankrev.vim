@@ -27,7 +27,7 @@ function! s:Yankrev()
     let l:line = line(".")
     let l:hash = get(systemlist("git rev-parse HEAD"), 0)
     let l:exists = count(systemlist("git ls-files"), l:filename)
-    let l:diff = count(systemlist("git diff --name-only"), expand("%"))
+    let l:diff = count(systemlist("git diff --name-only"), l:filename)
 
     let l:yankstr = l:filename . ":" . l:line
     if l:exists
