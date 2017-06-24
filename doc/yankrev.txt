@@ -1,6 +1,7 @@
 *yankrev.txt*           Yank revision (git-hash) and filename and lineno
 
 description                     |yankrev-description|
+usage                           |yankrev-usage|
 history                         |yankrev-history|
 
 ==============================================================================
@@ -8,6 +9,11 @@ DESCRIPTION                                              *yankrev-description*
 
 This plugin adds a :Yankrev command to yank revision (git-hash) and filename
 and lineno.
+
+==============================================================================
+USAGE                                                          *yankrev-usage*
+
+:Yankrev                Yank revision (git-hash) and filename and lineno.
 
 ==============================================================================
 HISTORY                                                      *yankrev-history*
