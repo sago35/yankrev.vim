@@ -1,0 +1,23 @@
+*yankrev.txt*           Yank revision (git-hash) and filename and lineno
+
+description                     |yankrev-description|
+history                         |yankrev-history|
+
+==============================================================================
+DESCRIPTION                                              *yankrev-description*
+
+This plugin adds a :Yankrev command to yank revision (git-hash) and filename
+and lineno.
+
+==============================================================================
+HISTORY                                                      *yankrev-history*
+
+0.1.0 24-Jun-2017
+    Initial release
+
+==============================================================================
+Copyright: (C) 2017 sago35
+The VIM LICENSE applies to this plugin; see |copyright|.
+
+==============================================================================
+ vim:tw=78:ts=8:ft=help:norl:
