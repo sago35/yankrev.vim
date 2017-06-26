@@ -18,19 +18,21 @@
 function! yankrev#Yankrev(start, end)
     let l:filename = substitute(expand("%"), "\\", "/", "g")
     let l:line = line(".")
+    let l:col = strdisplaywidth(strpart(getline("."), 0, col(".") - 1)) + 1
     if a:start != a:end
         let l:line = a:start . "-" . a:end
+        let l:col = ""
     endif
     let l:hash = get(systemlist("git rev-parse HEAD"), 0)
     let l:exists = count(systemlist("git ls-files"), l:filename)
     let l:diff = count(systemlist("git diff --name-only"), l:filename)
 
-    let l:yankstr = l:filename . ":" . l:line
+    let l:yankstr = l:filename . ":" . l:line . ":" . l:col
     if l:exists
         if l:diff
-            let l:yankstr = l:filename . ":" . l:line . "@" . l:hash . "*"
+            let l:yankstr = l:filename . ":" . l:line . ":" . l:col . "@" . l:hash . "*"
         else
-            let l:yankstr = l:filename . ":" . l:line . "@" . l:hash
+            let l:yankstr = l:filename . ":" . l:line . ":" . l:col . "@" . l:hash
         endif
     endif
 
