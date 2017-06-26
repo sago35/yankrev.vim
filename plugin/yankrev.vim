@@ -23,7 +23,7 @@ let g:loaded_yankrev = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-command! -nargs=0 Yankrev call yankrev#Yankrev()
+command! -nargs=0 -range Yankrev call yankrev#Yankrev(<line1>, <line2>)
 
 let &cpo = s:save_cpo
 unlet s:save_cpo

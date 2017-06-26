@@ -15,9 +15,12 @@
 "   0.1.0
 "       Initial release
 
-function! yankrev#Yankrev()
+function! yankrev#Yankrev(start, end)
     let l:filename = substitute(expand("%"), "\\", "/", "g")
     let l:line = line(".")
+    if a:start != a:end
+        let l:line = a:start . "-" . a:end
+    endif
     let l:hash = get(systemlist("git rev-parse HEAD"), 0)
     let l:exists = count(systemlist("git ls-files"), l:filename)
     let l:diff = count(systemlist("git diff --name-only"), l:filename)
